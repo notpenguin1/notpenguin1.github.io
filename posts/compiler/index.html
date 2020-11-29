@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    
+    <title></title>
+    <link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="/js/dark.js" defer=""></script>
+
+</head>
+
+<html>
+<!DOCTYPE html>
+<html>
+
+<body>
+  <header class="site-header">
+
+    <div class="wrapper">
+      <a class="muted small" href="https://notpenguin1.github.io/"></a>
+    </div>
+  </header>
+</body>
+
+</html>
+<h1>Compiler</h1>
+<p class="post-meta"><time itemprop="datePublished">November 29, 2020</time>
+</p>
+<h1 id="compilers">Compilers</h1>
+<h2 id="scanning">Scanning</h2>
+<p>A <em>scanner</em> converts source code into tokens.</p>
+<h3 id="deterministic-finite-automata-dfa">Deterministic Finite Automata (DFA)</h3>
+<p>A <em>deterministic finite automata</em> is a tuple $(S, \Sigma, \delta, s_0, S_A)$ where:</p>
+<ul>
+<li>$S$ is a finite set of states</li>
+<li>$\Sigma$ is a finite set of alphabets</li>
+<li>$\delta(s, c)$ is a transition function that maps each state $s \in S$ and character $c \in \Sigma$ to the next state</li>
+<li>$s_0 \in S$ is the starting state</li>
+<li>$S_A$ is the set of accepting states</li>
+</ul>
+<p>A DFA can be used to recognize certain patterns of words. The automata begins in $s_0$. It reads each character in the input, and uses the transition function $\delta$ to move to the next state. Once all characters are read, if we are in an accepting state, then the word is accepted.</p>
+<p>DFAs can be represented as a transition diagram</p>
+<pre><code class="language-mermaid" data-lang="mermaid">graph LR
+  s0((s&lt;sub&gt;0&lt;/sub&gt;)) --&gt;|i| s1((s&lt;sub&gt;1&lt;/sub&gt;))
+  s1 --&gt;|n| s2((s&lt;sub&gt;2&lt;/sub&gt;))
+  s2 --&gt;|t| s3((s&lt;sub&gt;3&lt;/sub&gt;))
+  s0 --&gt;|l| s4((s&lt;sub&gt;4&lt;/sub&gt;))
+  s4 --&gt;|o| s5((s&lt;sub&gt;5&lt;/sub&gt;))
+  s5 --&gt;|n| s6((s&lt;sub&gt;6&lt;/sub&gt;))
+  s6 --&gt;|g| s7((s&lt;sub&gt;7&lt;/sub&gt;))
+  class s2,s3,s7 mermaid-finite-automata-accepting-state;
+</code></pre><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<blockquote>
+</blockquote>
+
+
+<footer>
+    <div>
+        <h3><a href="https://notpenguin1.github.io/posts">Back to all posts</a></h3>
+    </div>
+    <hr>
+    <p>Go <a href="https://notpenguin1.github.io//index.xml">here</a> for an RSS feed.</p>
+</footer>
+
+</html>
