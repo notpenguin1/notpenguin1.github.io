@@ -1,33 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>My New Hugo Site</title>
-    <link>https://notpenguin1.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 29 Nov 2020 15:26:28 +0800</lastBuildDate><atom:link href="https://notpenguin1.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Compiler</title>
-      <link>https://notpenguin1.github.io/posts/compiler/</link>
-      <pubDate>Sun, 29 Nov 2020 15:26:28 +0800</pubDate>
-      
-      <guid>https://notpenguin1.github.io/posts/compiler/</guid>
-      <description>Compilers Scanning A scanner converts source code into tokens.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Site</title><link>https://notpenguin1.github.io/</link><description>Recent content on My New Hugo Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 29 Nov 2020 15:26:28 +0800</lastBuildDate><atom:link href="https://notpenguin1.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Compiler</title><link>https://notpenguin1.github.io/posts/compiler/</link><pubDate>Sun, 29 Nov 2020 15:26:28 +0800</pubDate><guid>https://notpenguin1.github.io/posts/compiler/</guid><description>Compilers Scanning A scanner converts source code into tokens.
 Deterministic Finite Automata (DFA) A deterministic finite automata is a tuple $(S, \Sigma, \delta, s_0, S_A)$ where:
- $S$ is a finite set of states $\Sigma$ is a finite set of alphabets $\delta(s, c)$ is a transition function that maps each state $s \in S$ and character $c \in \Sigma$ to the next state $s_0 \in S$ is the starting state $S_A$ is the set of accepting states  A DFA can be used to recognize certain patterns of words.</description>
-    </item>
-    
-    <item>
-      <title>Crypto</title>
-      <link>https://notpenguin1.github.io/posts/ctf/crypto/</link>
-      <pubDate>Sun, 29 Nov 2020 15:26:28 +0800</pubDate>
-      
-      <guid>https://notpenguin1.github.io/posts/ctf/crypto/</guid>
-      <description>Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
+$S$ is a finite set of states $\Sigma$ is a finite set of alphabets $\delta(s, c)$ is a transition function that maps each state $s \in S$ and character $c \in \Sigma$ to the next state $s_0 \in S$ is the starting state $S_A$ is the set of accepting states A DFA can be used to recognize certain patterns of words.</description></item><item><title>Crypto</title><link>https://notpenguin1.github.io/posts/ctf/crypto/</link><pubDate>Sun, 29 Nov 2020 15:26:28 +0800</pubDate><guid>https://notpenguin1.github.io/posts/ctf/crypto/</guid><description>Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
 Existence of MMI A MMI exists iff $a$ and $m$ are coprime.
-If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction.</description>
-    </item>
-    
-  </channel>
-</rss>
+If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction.</description></item></channel></rss>
