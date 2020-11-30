@@ -1,9 +1,148 @@
-<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Crypto</title><meta name=robots content="noodp"><meta name=description content><link rel=canonical href=https://notpenguin1.github.io/posts/ctf/crypto/><meta property="og:title" content="Crypto"><meta property="og:description" content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crypto</title>
+
+	<meta name="robots" content="noodp"/>
+	
+	
+		<meta name="description" content="">
+	
+
+	<link rel="canonical" href="https://notpenguin1.github.io/posts/ctf/crypto/"/>
+
+	<meta property="og:title" content="Crypto" />
+<meta property="og:description" content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
 Existence of MMI A MMI exists iff $a$ and $m$ are coprime.
-If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction."><meta property="og:type" content="article"><meta property="og:url" content="https://notpenguin1.github.io/posts/ctf/crypto/"><meta property="article:published_time" content="2020-11-29T15:26:28+08:00"><meta property="article:modified_time" content="2020-11-29T15:26:28+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Crypto"><meta name=twitter:description content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
+If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://notpenguin1.github.io/posts/ctf/crypto/" />
+<meta property="article:published_time" content="2020-11-29T15:26:28+08:00" />
+<meta property="article:modified_time" content="2020-11-29T15:26:28+08:00" />
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Crypto"/>
+<meta name="twitter:description" content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
 Existence of MMI A MMI exists iff $a$ and $m$ are coprime.
-If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction."><meta itemprop=name content="Crypto"><meta itemprop=description content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
+If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction."/>
+
+	<meta itemprop="name" content="Crypto">
+<meta itemprop="description" content="Crypto Random Prerequisite Math Modular Multiplicative Inverse A modular multiplicative inverse of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.
 Existence of MMI A MMI exists iff $a$ and $m$ are coprime.
-If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction."><meta itemprop=datePublished content="2020-11-29T15:26:28+08:00"><meta itemprop=dateModified content="2020-11-29T15:26:28+08:00"><meta itemprop=wordCount content="916"><meta itemprop=keywords content><link rel=stylesheet href=https://notpenguin1.github.io/css/bundle.min.css><link rel=stylesheet href=/styles.css></head><body><header><nav><h1><a href=https://notpenguin1.github.io/>My New Hugo Site</a></h1><ul><li><a href=/compiler/>Compiler</a></li><li><a href=/>Home</a></li></ul></nav></header><h1>Crypto</h1><time datetime="2020-11-29 15:26:28 +0800 +08" itemprop=datePublished>November 29, 2020</time><h1 id=crypto>Crypto</h1><h2 id=random-prerequisite-math>Random Prerequisite Math</h2><h3 id=modular-multiplicative-inverse>Modular Multiplicative Inverse</h3><p>A <em>modular multiplicative inverse</em> of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.</p><h4 id=existence-of-mmi>Existence of MMI</h4><p>A MMI exists iff $a$ and $m$ are coprime.</p><p>If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction. Thus, $\{0a, 1a, 2a, \dots, (m-1)a\} = \{0, 1, \dots, m-1\}$, which means $\exists x: ax \equiv 1 \pmod m$.</p><p>If a MMI exists, then assume $(a, m) = k, k > 1$. Then $ax \equiv 1 \pmod m$. $\because k \mid m, ax \therefore k \mid 1 \implies k = 1$, contradiction. Thus, $(a, m) = 1$.</p><h3 id=multiplicative-group>Multiplicative Group</h3><p>The <em>multiplicative group of integers modulo</em> $n$ is a group of all non-negative integers less than $n$ that are coprime to $n$. This group can be denoted: $(\textrm{Z}/n\textrm{Z})^\times, (\textrm{Z}/n\textrm{Z})^*$ or $Z_n^*$</p><p>$Z_n^*$ is closed under multiplication: $\forall a, b \in Z_n^*: ab \equiv c \pmod n$ where $c \in Z_n^*$. (Since $a, b$ are coprime with $n$, $ab$ must also be coprime).</p><h3 id=eulers-theorem>Euler&rsquo;s Theorem</h3><p>Euler&rsquo;s totient function, $\phi(n)$, returns the number of positive integers less than $n$ that are coprime to $n$.</p><p>Euler&rsquo;s theorem states that for all integers $a$ coprime to $n$:</p><p>$$a^{\phi(n)} \equiv 1 \pmod n$$</p><h4 id=proof-of-eulers-theorem>Proof of Euler&rsquo;s Theorem</h4><p>Consider $Z_n^* = \{r_1, r_2, \dots, r_{\phi(n)}\}$. Let $a \in Z_n^*$.</p><p>Assume $\exists i \ne j: ar_i \equiv ar_j \pmod n$. Then $n \mid a(r_i - r_j) \implies n \mid r_i - r_j \implies r_i = r_j$, contradiction. Thus, $ar_i \not\equiv ar_j \pmod n$.</p><p>Furthermore $ar_i \in Z_n^*$ (since $Z_n^*$ is closed under multiplication). $\{ar_1, ar_2, \dots ar_{\phi(n)}\} = Z_n^* \implies r_1 r_2 \dots r_{\phi(n)} \equiv ar_1 ar_2 \dots ar_{\phi(n)} \pmod n \implies a^{\phi(n)} \equiv 1 \pmod n$.</p><h3 id=primitive-root>Primitive Root</h3><p>An integer $g$ is a <em>primitive root modulo $n$</em> if every integer $a$ coprime to $n$ is congruent to a power of $g$ modulo $n$.</p><p>$$\forall a \in \textrm{Z}, (a, n) = 1, \exists k \in \textrm{Z}: a \equiv g^k \pmod n$$</p><p>$k$ is known as the <em>index</em> or <em>discrete logarithm</em> of $a$ to base $g$ modulo $n$. Finding $k$ is the <strong>discrete logarithm problem</strong>, and it is not known whether a polynomial algorithm exists to find $k$ given $a, g, n$.</p><h3 id=elliptic-curve>Elliptic Curve</h3><p>An <em>elliptic curve</em> is a plane curve defined by the equation $y^2 = x^3 + ax + b$. The discriminant of an elliptic curve, $\Delta = -16(4a^3 + 27b^2)$, must not be zero, as an elliptic curve is non-singular.</p><h4 id=operations>Operations</h4><p>There is a point at infinity, represented by $0$, which is the identity element.</p><p>Consider 2 distinct points $P, Q$. If there is no intersection between the straight line through $P, Q$ and the ellipse, then $P + Q = 0$ and $P = -Q$, where the negation of a point is the point with the same x-coordinate but negative y-coordinate.
-Otherwise, $P + Q = R$, where $R$ is the negation of the intersection of the straight line through $P, Q$ and the elliptic curve. When $P = Q$, then take the tangent to the elliptic curve at $P$ instead of a straight line through $P, Q$.</p><p>When $P \ne Q$, the formula for $R$ can be found by whacking:</p><p>$$
-(x_p, y_p) + (x_r, y_r) = (x_q, y_q)\<br>\text{Let } m = \frac{y_p - y_r}{x_p - x_r}\<br>x_q = m^2 - x_p - x_r\<br>y_q = m(x_p - x_r) - y_p\<br>$$</p><p>When $P = Q$, the formula for $R$ is the same, except that $m = \frac{3x_p^2 + a}{2y_p}$.</p><p>Note that $P + P + P + P = (P + P) + (P + P)$, which means that fast exponentiation can be used to calculate $nP$ in logarithemtic time.</p><h2 id=diffie-hellman-key-exchange>Diffie-Hellman Key Exchange</h2><p>The Diffie-Hellman Key Exchange algorithm allows two parties to share a key even without a secure communications channel.</p><ul><li>Alice and Bob agree on a large prime $p$, and a primitive root $g$ of $p$.</li><li>Alice chooses a secret integer $a$, and Bob chooses a secret integer $b$.</li><li>Alice sends $g^a \pmod p$ to Bob, Bob sends $g^b \pmod p$ to Alice.</li><li>Alice computes $s = (g^b)^a \pmod p = g^{ab} \pmod p$. Bob computes $s = (g^a)^b \pmod p = g^{ab} \pmod p$.</li></ul><p>$s = g^{ab} \pmod p$ is the secret key held by both Alice and Bob. Note that any eavesdropper will know $p, g, g^a$ and $g^b$. However, there is currently <a href=#primitive-root>no known polynomial algorithm for solving the discrete logarithm problem</a>, so attackers cannot reverse $a$ and $b$. They also cannot get $g^{ab}$ from $g^a, g^b$.</p><p>Making use of primitive roots is the standard, but not only way to do Diffie-Hellman. In fact, there is a generalized version of Diffie-Hellman:</p><ul><li>Alice and Bob pick a finite cyclic group $G$ of order $n$ and a generating element $g$ in $G$, where $G$ is written multiplicatively.</li><li>Alice picks a natural number $a$, $1 &lt; a &lt; n$, and sends $g^a$ to Bob.</li><li>Bob picks a natural number $b$, $1 &lt; b &lt; n$, and sends $g^b$ to Alice.</li><li>Alice computes $s = (g^b)^a$. Bob computes $s = (g^a)^b$.</li></ul><p>The group $G$ must satisfy the condition that there is no efficient algorithm for computing $g^{ab}$ given $g, g^a$ and $g^b$. A variant of this is <a href=#elliptic-curve-diffie-hellman>Elliptic Curve Diffie-Hellman</a>.</p><h2 id=elliptic-curve-diffie-hellman>Elliptic Curve Diffie-Hellman</h2><p>Test</p><footer><a href=#>&uarr;Back to top</a> || <a href=https://notpenguin1.github.io/index.xml>RSS</a> || <a href>Twitter</a> || <a href>LinkedIn</a><br></footer><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css integrity=sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js integrity=sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js integrity=sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa crossorigin=anonymous></script><script>document.addEventListener('DOMContentLoaded',()=>{renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},],macros:{"\\abs":"\\left| #1 \\right|"}})});</script></body></html>
+If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction.">
+<meta itemprop="datePublished" content="2020-11-29T15:26:28+08:00" />
+<meta itemprop="dateModified" content="2020-11-29T15:26:28+08:00" />
+<meta itemprop="wordCount" content="916">
+
+
+
+<meta itemprop="keywords" content="" />
+
+
+	
+	<link rel="stylesheet" href="https://notpenguin1.github.io/css/bundle.min.css">
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<header>
+<nav>
+   <h1><a href="https://notpenguin1.github.io/">My New Hugo Site</a></h1>
+   <ul>
+    
+        <li><a href="/compiler/">Compiler</a></li>
+    
+        <li><a href="/">Home</a></li>
+    
+   </ul>
+</nav>
+</header>	
+	
+    <h1>Crypto</h1>
+	<time datetime="2020-11-29 15:26:28 &#43;0800 &#43;08" itemprop="datePublished">November 29, 2020</time>
+	<h1 id="crypto">Crypto</h1>
+<h2 id="random-prerequisite-math">Random Prerequisite Math</h2>
+<h3 id="modular-multiplicative-inverse">Modular Multiplicative Inverse</h3>
+<p>A <em>modular multiplicative inverse</em> of an integer $a$ with respect to modulus $m$ is an integer $x$ such that $ax \equiv 1 \pmod m$.</p>
+<h4 id="existence-of-mmi">Existence of MMI</h4>
+<p>A MMI exists iff $a$ and $m$ are coprime.</p>
+<p>If $a$ and $m$ are coprime, consider $\{0a, 1a, 2a, \dots, (m-1)a\}$. If $\exists i \ne j: ia \equiv ij \pmod m$, then $m \mid a(i - j) \implies m \mid (i-j) \implies i = j$, which is a contradiction. Thus, $\{0a, 1a, 2a, \dots, (m-1)a\} = \{0, 1, \dots, m-1\}$, which means $\exists x: ax \equiv 1 \pmod m$.</p>
+<p>If a MMI exists, then assume $(a, m) = k, k &gt; 1$. Then $ax \equiv 1 \pmod m$. $\because k \mid m, ax \therefore k \mid 1 \implies k = 1$, contradiction. Thus, $(a, m) = 1$.</p>
+<h3 id="multiplicative-group">Multiplicative Group</h3>
+<p>The <em>multiplicative group of integers modulo</em> $n$ is a group of all non-negative integers less than $n$ that are coprime to $n$. This group can be denoted: $(\textrm{Z}/n\textrm{Z})^\times, (\textrm{Z}/n\textrm{Z})^*$ or $Z_n^*$</p>
+<p>$Z_n^*$ is closed under multiplication: $\forall a, b \in Z_n^*: ab \equiv c \pmod n$ where $c \in Z_n^*$. (Since $a, b$ are coprime with $n$, $ab$ must also be coprime).</p>
+<h3 id="eulers-theorem">Euler&rsquo;s Theorem</h3>
+<p>Euler&rsquo;s totient function, $\phi(n)$, returns the number of positive integers less than $n$ that are coprime to $n$.</p>
+<p>Euler&rsquo;s theorem states that for all integers $a$ coprime to $n$:</p>
+<p>$$a^{\phi(n)} \equiv 1 \pmod n$$</p>
+<h4 id="proof-of-eulers-theorem">Proof of Euler&rsquo;s Theorem</h4>
+<p>Consider $Z_n^* = \{r_1, r_2, \dots, r_{\phi(n)}\}$. Let $a \in Z_n^*$.</p>
+<p>Assume $\exists i \ne j: ar_i \equiv ar_j \pmod n$. Then $n \mid a(r_i - r_j) \implies n \mid r_i - r_j \implies r_i = r_j$, contradiction. Thus, $ar_i \not\equiv ar_j \pmod n$.</p>
+<p>Furthermore $ar_i \in Z_n^*$ (since $Z_n^*$ is closed under multiplication). $\{ar_1, ar_2, \dots ar_{\phi(n)}\} = Z_n^* \implies r_1 r_2 \dots r_{\phi(n)} \equiv ar_1 ar_2 \dots ar_{\phi(n)} \pmod n \implies a^{\phi(n)} \equiv 1 \pmod n$.</p>
+<h3 id="primitive-root">Primitive Root</h3>
+<p>An integer $g$ is a <em>primitive root modulo $n$</em> if every integer $a$ coprime to $n$ is congruent to a power of $g$ modulo $n$.</p>
+<p>$$\forall a \in \textrm{Z}, (a, n) = 1, \exists k \in \textrm{Z}: a \equiv g^k \pmod n$$</p>
+<p>$k$ is known as the <em>index</em> or <em>discrete logarithm</em> of $a$ to base $g$ modulo $n$. Finding $k$ is the <strong>discrete logarithm problem</strong>, and it is not known whether a polynomial algorithm exists to find $k$ given $a, g, n$.</p>
+<h3 id="elliptic-curve">Elliptic Curve</h3>
+<p>An <em>elliptic curve</em>  is a plane curve defined by the equation $y^2 = x^3 + ax + b$. The discriminant of an elliptic curve, $\Delta = -16(4a^3 + 27b^2)$, must not be zero, as an elliptic curve is non-singular.</p>
+<h4 id="operations">Operations</h4>
+<p>There is a point at infinity, represented by $0$, which is the identity element.</p>
+<p>Consider 2 distinct points $P, Q$. If there is no intersection between the straight line through $P, Q$ and the ellipse, then $P + Q = 0$ and $P = -Q$, where the negation of a point is the point with the same x-coordinate but negative y-coordinate.
+Otherwise, $P + Q = R$, where $R$ is the negation of the intersection of the straight line through $P, Q$ and the elliptic curve. When $P = Q$, then take the tangent to the elliptic curve at $P$ instead of a straight line through $P, Q$.</p>
+<p>When $P \ne Q$, the formula for $R$ can be found by whacking:</p>
+<p>$$
+(x_p, y_p) + (x_r, y_r) = (x_q, y_q)\<br>
+\text{Let } m = \frac{y_p - y_r}{x_p - x_r}\<br>
+x_q = m^2 - x_p - x_r\<br>
+y_q = m(x_p - x_r) - y_p\<br>
+$$</p>
+<p>When $P = Q$, the formula for $R$ is the same, except that $m = \frac{3x_p^2 + a}{2y_p}$.</p>
+<p>Note that $P + P + P + P = (P + P) + (P + P)$, which means that fast exponentiation can be used to calculate $nP$ in logarithemtic time.</p>
+<h2 id="diffie-hellman-key-exchange">Diffie-Hellman Key Exchange</h2>
+<p>The Diffie-Hellman Key Exchange algorithm allows two parties to share a key even without a secure communications channel.</p>
+<ul>
+<li>Alice and Bob agree on a large prime $p$, and a primitive root $g$ of $p$.</li>
+<li>Alice chooses a secret integer $a$, and Bob chooses a secret integer $b$.</li>
+<li>Alice sends $g^a \pmod p$ to Bob, Bob sends $g^b \pmod p$ to Alice.</li>
+<li>Alice computes $s = (g^b)^a \pmod p = g^{ab} \pmod p$. Bob computes $s = (g^a)^b \pmod p = g^{ab} \pmod p$.</li>
+</ul>
+<p>$s = g^{ab} \pmod p$ is the secret key held by both Alice and Bob. Note that any eavesdropper will know $p, g, g^a$ and $g^b$. However, there is currently <a href="#primitive-root">no known polynomial algorithm for solving the discrete logarithm problem</a>, so attackers cannot reverse $a$ and $b$. They also cannot get $g^{ab}$ from $g^a, g^b$.</p>
+<p>Making use of primitive roots is the standard, but not only way to do Diffie-Hellman. In fact, there is a generalized version of Diffie-Hellman:</p>
+<ul>
+<li>Alice and Bob pick a finite cyclic group $G$ of order $n$ and a generating element $g$ in $G$, where $G$ is written multiplicatively.</li>
+<li>Alice picks a natural number $a$, $1 &lt; a &lt; n$, and sends $g^a$ to Bob.</li>
+<li>Bob picks a natural number $b$, $1 &lt; b &lt; n$, and sends $g^b$ to Alice.</li>
+<li>Alice computes $s = (g^b)^a$. Bob computes $s = (g^a)^b$.</li>
+</ul>
+<p>The group $G$ must satisfy the condition that there is no efficient algorithm for computing $g^{ab}$ given $g, g^a$ and $g^b$. A variant of this is <a href="#elliptic-curve-diffie-hellman">Elliptic Curve Diffie-Hellman</a>.</p>
+<h2 id="elliptic-curve-diffie-hellman">Elliptic Curve Diffie-Hellman</h2>
+<p>Test</p>
+ 	               			  
+
+	<footer>
+	<a href="#">&uarr;Back to top</a> || <a href="https://notpenguin1.github.io/index.xml">RSS</a> || <a href="">Twitter</a> || <a href="">LinkedIn</a><br>
+	
+</footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		renderMathInElement(document.body, {
+			delimiters: [
+				{left: "$$", right: "$$", display: true},
+				{left: "\\[", right: "\\]", display: true},
+				{left: "$", right: "$", display: false},
+			],
+			macros: {
+				"\\abs": "\\left| #1 \\right|"
+			}
+		})
+	});
+</script>
+</body>
+</html>	
