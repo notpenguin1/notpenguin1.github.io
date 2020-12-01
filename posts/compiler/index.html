@@ -34,7 +34,7 @@ Deterministic Finite Automata (DFA) A deterministic finite automata is a tuple $
  $S$ is a finite set of states $\Sigma$ is a finite set of alphabets $\delta(s, c)$ is a transition function that maps each state $s \in S$ and character $c \in \Sigma$ to the next state $s_0 \in S$ is the starting state $S_A$ is the set of accepting states  A DFA can be used to recognize certain patterns of words.">
 <meta itemprop="datePublished" content="2020-11-29T15:26:28+08:00" />
 <meta itemprop="dateModified" content="2020-11-29T15:26:28+08:00" />
-<meta itemprop="wordCount" content="565">
+<meta itemprop="wordCount" content="724">
 
 
 
@@ -44,7 +44,14 @@ Deterministic Finite Automata (DFA) A deterministic finite automata is a tuple $
 	
 	<link rel="stylesheet" href="https://notpenguin1.github.io/css/bundle.min.css">
 	<link rel="stylesheet" href="/styles.css">
+
+  
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
+
+  
 </head>
+
 <body>
 	<header>
 <nav>
@@ -82,6 +89,8 @@ $$\delta(\delta(\ldots \delta(\delta(s_0, c_1), c_2) \ldots, c_{n-1}), c_n) \in 
 	<img src="/img/dfa.svg" alt="DFA" class="w-50" />
 	<figcaption>DFA</figcaption>
 </figure>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>It is possible for transitions to loop from the same node to themselves, such as a DFA used to recognize numbers of any length.</p>
 <h3 id="nondeterministic-finite-automata">Nondeterministic Finite Automata</h3>
 <p>A <em>nondeterministic finite automata</em> is a finite automata that is different from DFAs in 2 ways:</p>
@@ -104,7 +113,13 @@ $$\delta(\delta(\ldots \delta(\delta(s_0, c_1), c_2) \ldots, c_{n-1}), c_n) \in 
 <h3 id="equivalence-of-dfa-nfa-and-regexes">Equivalence of DFA, NFA and Regexes</h3>
 <h4 id="dfa-is-a-nfa">DFA is a NFA</h4>
 <p>Yes</p>
-<h4 id="nfa-is-a-dfa">NFA is a DFA</h4>
+<h4 id="nfa-is-a-dfa-powerset-construction">NFA is a DFA (Powerset Construction)</h4>
+<p>A DFA can be constructed from a NFA using <em>powerset construction</em>. Consider a NFA $(S, \Sigma, \delta, s_0, S_A)$. Let $S'$ be the states of the equivalent DFA, where each $s' \in S'$ is a set of elements from $S$. The $\epsilon$-closure of a set is the set of all states that can be reached from elements within the set using only $\epsilon$ transitions. Initially, let $S' = \{s_0'\}$, where $s_0' = \epsilon$-closure of $\{s_0\}$. Let $Q$ be a queue, initially containing only $s_0'$.</p>
+<ol>
+<li>While $Q \ne \emptyset$, pop state $s'$.</li>
+<li>Let $next_s'$ be the $\epsilon$-closure of reachable states in $S$ from $s \in s'$. If $next_s' \ne s'$, then add $next_s'$ to $S'$, where a transition from $s'$ to $next_s'$ through letter $c$ is possible iff $\exists a \in s', b \in next_s':$ $a \to b$ through $c$ exists. Append $next_s'$ to $Q$.</li>
+<li>A state $s'$ is accepting iff $\exists s \in s': s$ is accepting.</li>
+</ol>
  	               			  
 
 	<footer>
